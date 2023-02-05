@@ -1,20 +1,12 @@
 #pragma once
 
 #include <iostream>
-#include <dpp/dpp.h>
 #include <string>
-#include "spdlog/spdlog.h"
+#include <dpp/dpp.h>
+#include "../events/interactionCreate.hpp"
 
 using namespace std;
-using namespace dpp;
 
-#include "../events/ready.hpp"
-#include "../events/interactionCreate.hpp"
-#include "../events/messageCreate.hpp"
-
-inline void LoadEvents(cluster& bot) {
-	ready(bot);
+void LoadEvents(dpp::cluster& bot) {
 	interactionCreate(bot);
-	messageCreate(bot);
-	return;
 }

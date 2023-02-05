@@ -5,6 +5,7 @@
 #include <dpp/nlohmann/json.hpp>
 #include <string>
 
+#include "./database/db.hpp"
 #include "./handlers/events.hpp"
 #include "./handlers/commands.hpp"
 
@@ -24,12 +25,14 @@ int main() {
     }
 
     const auto token = reader["token"];
+    string mongo_uri = reader["mongo_db_uri"];
+    dbmain(mongo_uri);
     dpp::cluster bot(token, dpp::i_default_intents | dpp::i_message_content);
     bot.on_log(dpp::utility::cout_logger());
 
     bot.on_ready([&bot](const dpp::ready_t& event) {
-       LoadEvents(bot);
-       LoadCommands(bot);
+        LoadEvents(bot);
+        LoadCommands(bot);
     });
 
     bot.start(dpp::st_wait);
