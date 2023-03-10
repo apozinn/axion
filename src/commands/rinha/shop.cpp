@@ -25,7 +25,8 @@ void Shop(
     auto embed = dpp::embed()
     	.set_author(fmt::format("{} • Shop", bot.me.username), "", bot.me.get_avatar_url())
     	.set_color(0xed0024)
-    	.set_description(fmt::format("Shop"))
+    	.set_description(fmt::format("Bem vindo(a) á Galo'store!"))
+    	.add_field("Introdução:", "Aqui você encontrada itens e bônus para seus galos.")
     	.set_timestamp(time(0));
     event.reply(dpp::message().add_embed(embed));
 }
