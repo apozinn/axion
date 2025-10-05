@@ -94,10 +94,11 @@ class Rooster {
 	}
 
 	void withProps(bsoncxx::array::element& ele) {
-		name = ele["name"].get_string().value.to_string();
-		classe = ele["classe"].get_string().value.to_string();
-		rarity = ele["rarity"].get_string().value.to_string();
-		weakness = ele["weakness"].get_string().value.to_string();
+		name = std::string(ele["name"].get_string().value);
+		classe = std::string(ele["class"].get_string().value);
+		rarity = std::string(ele["rarity"].get_string().value);
+		weakness = std::string(ele["weakness"].get_string().value);
+		
 		life = ele["life"].get_int32().value;
 		current_life = life;
 		atk = ele["atk"].get_int32().value;
@@ -109,11 +110,11 @@ class Rooster {
 
 		for(auto skl : ele["skills"].get_array().value) {
 			Skill n_skl = { 
-			name: skl["name"].get_string().value.to_string(),
-			type: skl["type"].get_string().value.to_string(),
+			name: std::string(skl["name"].get_string().value),
+			type: std::string(skl["type"].get_string().value),
 			code: skl["code"].get_int32().value,
 			limit: skl["limit"].get_int32().value,
-			description: skl["description"].get_string().value.to_string()};
+			description: std::string(skl["description"].get_string().value)};
 			skills.push_back(n_skl);
 		}
 	}

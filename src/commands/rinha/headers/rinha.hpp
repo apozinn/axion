@@ -505,7 +505,7 @@ void batle_ended(
 	in_batle_roosters.clear();
 	batle_history.clear();
 	turn = 0;
-	bot.message_create_sync(
+	bot.message_create(
 		dpp::message(message.channel_id, embed_ended).add_component(dpp::component().add_component(back_button))
 	);
 
@@ -532,9 +532,9 @@ auto batle_history_format = [](auto& element, int limit=0) {
 	string string_formated;
 	auto add_to_string = [&](auto& ele) {
 		string_formated.append(fmt::format("\n**{}** vs **{}**\nVencedor: **{}** | Turnos: **{}** | Data: **{}**",
-			ele["roosters"].get_array().value[0].get_string().value.to_string(),
-			ele["roosters"].get_array().value[1].get_string().value.to_string(),
-			ele["winner"].get_string().value.to_string(),
+			std::string(ele["roosters"].get_array().value[0].get_string().value),
+			std::string(ele["roosters"].get_array().value[1].get_string().value),
+			std::string(ele["winner"].get_string().value),
 			to_string(ele["turns"].get_int32().value),
 			"Hoje"
 		));

@@ -1,4 +1,4 @@
 {
-    "token": "discord bot token,
-    "mongo_db_uri": "mongodb uri"
+    "token": "",
+    "mongo_db_uri": ""
 }

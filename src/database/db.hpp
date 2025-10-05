@@ -4,7 +4,6 @@
 #include <string>
 #include <cstdlib>
 #include <memory>
-#include <bsoncxx/stdx/make_unique.hpp>
 #include <bsoncxx/stdx/optional.hpp>
 #include <bsoncxx/stdx/string_view.hpp>
 #include <mongocxx/instance.hpp>
@@ -14,7 +13,6 @@
 
 #include <bsoncxx/json.hpp>
 #include <mongocxx/client.hpp>
-#include <mongocxx/stdx.hpp>
 #include <bsoncxx/builder/stream/helpers.hpp>
 #include <bsoncxx/builder/stream/document.hpp>
 #include <bsoncxx/builder/stream/array.hpp>
@@ -75,10 +73,10 @@ void configure(mongocxx::uri uri) {
     };
 
     auto instance =
-        bsoncxx::stdx::make_unique<mongocxx::instance>(bsoncxx::stdx::make_unique<noop_logger>());
+        std::make_unique<mongocxx::instance>(std::make_unique<noop_logger>());
 
     mongo_access::instance().configure(std::move(instance),
-                                       bsoncxx::stdx::make_unique<mongocxx::pool>(std::move(uri)));
+                                       std::make_unique<mongocxx::pool>(std::move(uri)));
 }
 
 bool do_work() {

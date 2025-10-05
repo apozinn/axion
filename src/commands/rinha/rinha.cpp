@@ -238,7 +238,7 @@ void Rinha(
 				}
 			}
 
-			bot.message_delete_sync(message.id, message.channel_id);
+			bot.message_delete(message.id, message.channel_id);
 			return;
 		}
 
