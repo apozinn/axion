@@ -1,4 +1,5 @@
 {
     "token": "",
-    "mongo_db_uri": ""
+    "mongo_db_uri": "",
+    "language": "en_US"
 }

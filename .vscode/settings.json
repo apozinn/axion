@@ -75,6 +75,10 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "bitset": "cpp",
+        "complex": "cpp",
+        "stack": "cpp",
+        "typeindex": "cpp"
     }
 }

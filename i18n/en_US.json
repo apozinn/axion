@@ -1,0 +1,9 @@
+{
+  "messages": {
+    "welcome_user": "Welcome to Axion™! This bot turns your Discord server into an arena of rooster champions. Collect, train, and battle roosters with unique abilities and rarities. Use commands and buttons to fight, open chests, manage your inventory, and climb the leaderboard. Ready to become the ultimate rooster master?"
+  },
+  "erros": {
+    "tokenNotFound": "token not found",
+    "mongoDbUriNotFound": "mongo db uri not found"
+  }
+}

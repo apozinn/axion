@@ -2,3 +2,4 @@ config.json
 concept
 build
 uncrustify.cfg
+.vscode

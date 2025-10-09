@@ -1,0 +1,9 @@
+{
+  "messages": {
+    "welcome_user": "Boas-vindas ao Axion™! Este bot transforma seu servidor Discord em uma arena de campeões de galos. Colecione, treine e lute com galos que possuem habilidades e raridades únicas. Use comandos e botões para lutar, abrir baús, gerenciar seu inventário e subir no placar. Pronto para se tornar o mestre supremo dos galos?"
+  },
+  "erros": {
+    "tokenNotFound": "token nao encontrado",
+    "mongoDbUriNotFound": "uri do mongo db nao encontrado "
+  }
+}
