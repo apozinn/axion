@@ -37,10 +37,4 @@ public:
      * @param ele The BSON array element containing the rooster data.
      */
     void CreateWithProps(bsoncxx::array::element& ele);
-
-    /**
-     * @brief Initializes the rooster's properties from a BSON element (overload).
-     * @param ele The BSON array element containing the rooster data.
-     */
-    void CreateWithProps(bsoncxx::array::element &ele);
 };

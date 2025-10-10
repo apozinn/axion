@@ -38,6 +38,8 @@ private:
      */
     void RegisterSlashCommands();
 
+    void OnReady(const dpp::ready_t &event);
+
     /**
      * @brief Handles a slash command interaction.
      * @param event The slash command event received from Discord.

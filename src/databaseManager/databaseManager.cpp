@@ -58,7 +58,7 @@ bool DatabaseManager::TestConnection()
 {
     try
     {
-        auto conn = Connect();
+        auto conn = GetConnect();
         return static_cast<bool>(conn);
     }
     catch (...)
