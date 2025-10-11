@@ -1,9 +1,84 @@
 {
   "messages": {
-    "welcome_user": "Welcome to Axion™! This bot turns your Discord server into an arena of rooster champions. Collect, train, and battle roosters with unique abilities and rarities. Use commands and buttons to fight, open chests, manage your inventory, and climb the leaderboard. Ready to become the ultimate rooster master?"
+    "welcome_user": "Welcome to Gryphon! This bot turns your Discord server into an arena of rooster champions. Collect, train, and battle roosters with unique abilities and rarities. Use commands and buttons to fight, manage your inventory, and climb the leaderboard. Ready to become the ultimate rooster master?"
   },
   "erros": {
     "tokenNotFound": "token not found",
     "mongoDbUriNotFound": "mongo db uri not found"
+  },
+  "commands": {
+    "help": {
+      "metadata": {
+        "description": "Displays detailed command information."
+      },
+      "embed_data": {
+        "title": "List of all commands"
+      }
+    },
+    "history": {
+      "metadata": {
+        "description": "Shows a log of your recent actions and battles."
+      }
+    },
+    "coop": {
+      "metadata": {
+        "description": "Displays your full collection of roosters (your roster/party)."
+      }
+    },
+    "stats": {
+      "metadata": {
+        "description": "Shows the detailed stats of your currently selected rooster."
+      }
+    },
+    "select": {
+      "metadata": {
+        "description": "Sets a specific rooster from your collection as the active fighter."
+      }
+    },
+    "hunt": {
+      "metadata": {
+        "description": "Attempts to find and catch a new wild rooster."
+      }
+    },
+    "train": {
+      "metadata": {
+        "description": "Spends resources to increase the stats and XP of the active rooster."
+      }
+    },
+    "moves": {
+      "metadata": {
+        "description": "Shows the list of available skills/abilities for your active rooster."
+      }
+    },
+    "fight": {
+      "metadata": {
+        "description": "Initiates a battle with another player (PvP) or a random encounter."
+      }
+    },
+    "heal": {
+      "metadata": {
+        "description": "Restores your rooster's health using items or a cooldown."
+      }
+    },
+    "shop": {
+      "metadata": {
+        "description": "Opens the market to buy and sell items."
+      }
+    },
+    "inventory": {
+      "metadata": {
+        "description": "Displays all items and resources currently owned by the user."
+      }
+    },
+    "league": {
+      "metadata": {
+        "description": "Initiates a progressive battle against strong AI opponents (PvE)."
+      }
+    },
+    "champ": {
+      "metadata": {
+        "description": "Manages the server's competitive PvP tournament (subcommands: open, join)."
+      }
+    }
   }
 }

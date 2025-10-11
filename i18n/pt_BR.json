@@ -1,9 +1,84 @@
 {
   "messages": {
-    "welcome_user": "Boas-vindas ao Axion™! Este bot transforma seu servidor Discord em uma arena de campeões de galos. Colecione, treine e lute com galos que possuem habilidades e raridades únicas. Use comandos e botões para lutar, abrir baús, gerenciar seu inventário e subir no placar. Pronto para se tornar o mestre supremo dos galos?"
+    "welcome_user": "Boas-vindas ao Gryphon! Este bot transforma seu servidor Discord em uma arena de campeões de galos. Colecione, treine e lute com galos que possuem habilidades e raridades únicas. Use comandos e botões para lutar, gerenciar seu inventário e subir no placar. Pronto para se tornar o mestre supremo dos galos?"
   },
   "erros": {
     "tokenNotFound": "token nao encontrado",
     "mongoDbUriNotFound": "uri do mongo db nao encontrado "
+  },
+  "commands": {
+    "help": {
+      "metadata": {
+        "description": "Exibe informações detalhadas do comando."
+      },
+      "embed_data": {
+        "title": "Lista de todos os comandos"
+      }
+    },
+    "history": {
+      "metadata": {
+        "description": "Mostra um registro de suas ações e batalhas recentes."
+      }
+    },
+    "coop": {
+      "metadata": {
+        "description": "Exibe sua coleção completa de galos (seu time/plantel)."
+      }
+    },
+    "stats": {
+      "metadata": {
+        "description": "Mostra as estatísticas detalhadas do seu galo selecionado."
+      }
+    },
+    "select": {
+      "metadata": {
+        "description": "Define um galo específico da sua coleção como o lutador ativo."
+      }
+    },
+    "hunt": {
+      "metadata": {
+        "description": "Tenta encontrar e capturar um novo galo selvagem."
+      }
+    },
+    "train": {
+      "metadata": {
+        "description": "Gasta recursos para aumentar as estatísticas e XP do galo ativo."
+      }
+    },
+    "moves": {
+      "metadata": {
+        "description": "Mostra a lista de habilidades/movimentos disponíveis para seu galo ativo."
+      }
+    },
+    "fight": {
+      "metadata": {
+        "description": "Inicia uma batalha com outro jogador (PvP) ou um encontro aleatório."
+      }
+    },
+    "heal": {
+      "metadata": {
+        "description": "Restaura a saúde do seu galo usando itens ou um tempo de recarga."
+      }
+    },
+    "shop": {
+      "metadata": {
+        "description": "Abre o mercado para comprar e vender itens."
+      }
+    },
+    "inventory": {
+      "metadata": {
+        "description": "Exibe todos os itens e recursos atualmente de propriedade do usuário."
+      }
+    },
+    "league": {
+      "metadata": {
+        "description": "Inicia uma batalha progressiva contra oponentes de IA fortes (PvE)."
+      }
+    },
+    "champ": {
+      "metadata": {
+        "description": "Gerencia o torneio PvP competitivo do servidor (subcomandos: open, join)."
+      }
+    }
   }
 }

@@ -12,17 +12,10 @@
 #include "commands/fight.hpp"
 #include "commands/help.hpp"
 #include "commands/inventory.hpp"
-#include "commands/skills.hpp"
 #include "commands/stats.hpp"
+#include "commands/commandsList.hpp"
 
 using json = nlohmann::json;
-
-std::vector<std::vector<std::string>> SlashCommandsList{
-    {"fight", "Starts a rooster battle by challenging another player."},
-    {"inventory", "Views your current collection of roosters and items."},
-    {"stats", "Shows your personal statistics and the global leaderboard."},
-    {"skills", "Displays all available skills in the game."},
-    {"help", "Displays detailed command information."}};
 
 std::unordered_map<std::string, std::function<std::unique_ptr<Command>(const dpp::slashcommand_t &)>> CommandRegistry{
     {"fight", [](const dpp::slashcommand_t &event)
@@ -31,8 +24,6 @@ std::unordered_map<std::string, std::function<std::unique_ptr<Command>(const dpp
      { return std::make_unique<HelpCommand>(event); }},
     {"inventory", [](const dpp::slashcommand_t &event)
      { return std::make_unique<InventoryCommand>(event); }},
-    {"skills", [](const dpp::slashcommand_t &event)
-     { return std::make_unique<SkillsCommand>(event); }},
     {"stats", [](const dpp::slashcommand_t &event)
      { return std::make_unique<StatsCommand>(event); }}};
 
@@ -67,11 +58,11 @@ void Client::RegisterSlashCommands()
 {
     std::vector<dpp::slashcommand> Commands;
 
-    for (auto &n_cmd : SlashCommandsList)
+    for (auto &n_cmd : CommandsList::SlashCommandsList)
     {
         dpp::slashcommand cmd;
-        cmd.set_name(n_cmd[0])
-            .set_description(n_cmd[1])
+        cmd.set_name(n_cmd.name)
+            .set_description(n_cmd.description)
             .set_application_id(m_cluster->me.id);
         Commands.push_back(cmd);
     }
